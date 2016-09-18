@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <link type="text/css" rel="stylesheet" href="css/Style.css"/>
+    <link type="text/css" rel="stylesheet" href="css/Ng-cloak.css"/>
+    <title>Angular Sapper</title>
+</head>
+<body ng-cloak ng-controller="Sapper as $ctrl">
+<center>
+    <select ng-model="$ctrl.sapper.width">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+    <select ng-model="$ctrl.sapper.height">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+    <select ng-model="$ctrl.sapper.mines">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+    </select>
+    <label>Mines left: <span>{{$ctrl.sapper.mines - $ctrl.sapper.flaggs}}</span></label>
+    <table>
+        <tbody >
+        <tr ng-repeat="row in $ctrl.sapper.fields track by $index" data-i="{{$index}}">
+            <td ng-repeat="cell in row track by $index" data-i="{{$parent.$index}}" data-j="{{$index}}">
+                {{cell | fieldFilter}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <button ng-click="$ctrl.prepareField()">New game</button>
+</center>
+
+    <script type="text/javascript" src="js/angular/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/services/default-values.js"></script>
+    <script type="text/javascript" src="js/services/field-service.js"></script>
+    <script type="text/javascript" src="js/services/mines-service.js"></script>
+    <script type="text/javascript" src="js/services/sapper-service.js"></script>
+    <script type="text/javascript" src="js/filters/field-filter.js"></script>
+    <script type="text/javascript" src="js/controllers/sapper-controller.js"></script>
+</body>
+</html>

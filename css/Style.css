@@ -1,0 +1,32 @@
+﻿td {
+	width: 20px;
+}
+
+td.opened {
+	background-color: gainsboro;
+}
+
+tr {
+	height: 20px;
+}
+
+table {
+	margin: 10px;
+}
+
+table tr td{
+	border: 1px solid black;
+	text-align: center;
+}
+
+table tr td:hover{
+	background-color: yellow;
+}
+
+table.success{
+	background-color: green;
+}
+
+table.fail{
+	background-color: red;
+}
