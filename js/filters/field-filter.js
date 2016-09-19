@@ -12,7 +12,7 @@
                     if (value.mined) {
                         return "☢"
                     } else {
-                        return "";
+                        return value.mines;
                     }
                     break;
                 case fieldStatus.flagged:

@@ -13,7 +13,6 @@
 
     function setMines(sapper) {
         var mi, mj;
-        debugger;
         sapper.mines = Math.min(sapper.width * sapper.height, sapper.mines);
         var flag = (sapper.mines <= sapper.width * sapper.height / 2);
         if (!flag) {

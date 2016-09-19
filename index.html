@@ -25,8 +25,8 @@
         <option value="50">50</option>
     </select>
     <label>Mines left: <span>{{$ctrl.sapper.mines - $ctrl.sapper.flaggs}}</span></label>
-    <table>
-        <tbody >
+    <table oncontextmenu="return false" >
+        <tbody ng-click="$ctrl.clickEvent($event)">
         <tr ng-repeat="row in $ctrl.sapper.fields track by $index" data-i="{{$index}}">
             <td ng-repeat="cell in row track by $index" data-i="{{$parent.$index}}" data-j="{{$index}}">
                 {{cell | fieldFilter}}

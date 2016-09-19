@@ -1,5 +1,5 @@
 ﻿td {
-	width: 20px;
+	width: 25px;
 }
 
 td.opened {
@@ -7,7 +7,7 @@ td.opened {
 }
 
 tr {
-	height: 20px;
+	height: 25px;
 }
 
 table {
@@ -17,6 +17,7 @@ table {
 table tr td{
 	border: 1px solid black;
 	text-align: center;
+	cursor: default;
 }
 
 table tr td:hover{
